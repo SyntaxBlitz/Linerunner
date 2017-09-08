@@ -1,0 +1,91 @@
+{
+	"characters": [
+		"Lockstock",
+		"Penny",
+		"Bobby",
+		"Little Sally",
+		"Hope",
+		"Fipp",
+		"Old Man Strong",
+		"Tiny Tom",
+		"Soupy Sue",
+		"Little Becky Two-shoes",
+		"Robby the Stockfish",
+		"Barrel",
+		"Cladwell",
+		"McQueen",
+		"Hot Blades Harry",
+		"Josephine",
+		"Mrs. Millennium",
+		"UGC Executive #1",
+		"UGC Executive #2"
+	],
+	"characterClasses": {
+		"All": [
+			0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+		],
+		"The poor": [
+			2, 3, 6, 7, 8, 9, 10, 14, 15
+		],
+		"UGC Staff": [
+			0, 1, 4, 5, 11, 13, 16
+		]
+	},
+	"scenes": [
+		{
+			"name": "Act 1, Scene 1 (Urinetown, Privilege to pee)",
+			"meta": "files/1.1.audio.json",
+			"audio": "files/1.1.mp3"
+		},
+		{
+			"name": "Act 1, Scene 2 (Mr. Cladwell)",
+			"meta": "files/1.2.audio.json",
+			"audio": "files/1.2.mp3"
+		},
+		{
+			"name": "Act 1, Scene 3 (Cop song, Follow your heart)",
+			"meta": "files/1.3.audio.json",
+			"audio": "files/1.3.mp3"
+		},
+		{
+			"name": "Act 1, Scene 4 (Look at the Sky)",
+			"meta": "files/1.4.audio.json",
+			"audio": "files/1.4.mp3"
+		},
+		{
+			"name": "Act 1, Scene 5 (Don't be the bunny)",
+			"meta": "files/1.5.audio.json",
+			"audio": "files/1.5.mp3"
+		},
+		{
+			"name": "Act 1, Scene 6 (Act I Finale)",
+			"meta": "files/1.6.audio.json",
+			"audio": "files/1.6.mp3"
+		},
+		{
+			"name": "Act 2, Scene 1 (What is Urinetown?)",
+			"meta": "files/2.1.audio.json",
+			"audio": "files/2.1.mp3"
+		},
+		{
+			"name": "Act 2, Scene 2 (Snuff that girl, Run freedom run)",
+			"meta": "files/2.2.audio.json",
+			"audio": "files/2.2.mp3"
+		},
+		{
+			"name": "Act 2, Scene 3 (Why did I listen to that man)",
+			"meta": "files/2.3.audio.json",
+			"audio": "files/2.3.mp3"
+		},
+		{
+			"name": "Act 2, Scene 4 (We're not sorry)",
+			"meta": "files/2.4.audio.json",
+			"audio": "files/2.4.mp3"
+		},
+		{
+			"name": "Act 2, Scene 5 (I see a river)",
+			"meta": "files/2.5.audio.json",
+			"audio": "files/2.5.mp3"
+		}
+	]
+}

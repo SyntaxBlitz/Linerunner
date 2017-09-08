@@ -1,0 +1,35 @@
+<textarea id="in"></textarea><br>
+<button id="b">map audio</button>
+
+<script>
+	var ta = document.getElementById('in');
+	var button = document.getElementById('b');
+
+	button.onclick = function () {
+		var injson = JSON.parse(ta.value);
+
+		var elements = [];
+
+		for (var i = 0; i < injson.lines.length; i++) {
+			var div = document.createElement('div');
+			div.innerHTML = injson.lines[i].line;
+			document.body.appendChild(div);
+
+			var inp = document.createElement('input');
+			elements[i] = inp;
+			document.body.appendChild(inp);
+		}
+
+		var newButton = document.createElement('button');
+		newButton.innerHTML = "done";
+		document.body.appendChild(newButton);
+		newButton.onclick = function () {
+			for (var i = 0; i < elements.length; i++) {
+				var numbers = elements[i].value.split('-').map(function(n) {return parseFloat(n)});
+				injson.lines[i].startTime = numbers[0];
+				injson.lines[i].length = numbers[1] - numbers[0];
+			}
+			console.log(JSON.stringify(injson));
+		};
+	};
+</script>

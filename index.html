@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<script src="jsdiff.js"></script>
+		<script src="//code.jquery.com/jquery-2.2.0.min.js">jQuery 2.2.0</script>
+		<script src="jquery-ajax-arraybuffer.js">jQuery 2.2.0</script>
+
+		<script src="index.js"></script>
+
+		<style>
+			@import url(index.css);
+		</style>
+
+		<title>
+			Urine charge - run lines by yourself
+		</title>
+	</head>
+
+	<body>
+		<div>Scene: 
+			<select id="sceneSelector">
+				<option value="">--</option>
+			</select>
+		</div>
+		<div>Character: 
+			<select id="characterSelector">
+				<option value="">--</option>
+			</select>
+		</div>
+
+		<div id="playPauseButton" class="button disabled">Play</div>				
+		<div id="promptLabel">Play a noise when it's your turn to speak? <input type="checkbox" id="promptSoundCheck" checked="checked"></div>
+
+		<table id="firstTable"> <!-- this is nothing more than an indication that I have useful things to do with my time. -->
+			<tr>
+				<td>
+					<div id="previousLineLabel">
+						Previous line:
+					</div>
+				</td>
+				<td>
+					<div id="previousLineRestartButton" class="button">
+						Replay
+					</div>
+				</td>
+		</table>
+		<div id="previousLine">
+		</div>
+
+		<table>
+			<tr>
+				<td>
+					<div id="currentLineLabel">
+						Current line:
+					</div>
+				</td>
+				<td>
+					<div id="currentLineRestartButton" class="button">
+						Start over
+					</div>
+				</td>
+				<td>
+					<div id="currentLineSkipButton" class="button">
+						Skip
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div id="currentLine">
+		</div>
+
+		<table>
+			<tr>
+				<td>
+					<div id="transcriptLabel">
+						Transcript:
+					</div>
+				</td>
+				<td>
+					<div id="transcriptCollapseButton">+</div>
+				</td>
+			</tr>
+		</table>
+		<div id="transcript">
+		</div>
+	</body>
+</html>

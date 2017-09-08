@@ -1,0 +1,76 @@
+<textarea id="in"></textarea><br>
+<button id="b">parse</button>
+
+<script>
+	var characters = {
+		"characters": [
+			"Lockstock",
+			"Penny",
+			"Bobby",
+			"Little Sally",
+			"Hope",
+			"Fipp",
+			"Old Man Strong",
+			"Tiny Tom",
+			"Soupy Sue",
+			"Little Becky Two-shoes",
+			"Robby the Stockfish",
+			"Barrel",
+			"Cladwell",
+			"McQueen",
+			"Hot Blades Harry",
+			"Josephine",
+			"Mrs. Millennium",
+			"UGC Executive #1",
+			"UGC Executive #2"
+		],
+		"characterClasses": {
+			"The poor": [
+				2, 3, 6, 7, 8, 9, 10, 14, 15
+			],
+			"UGC Staff": [
+				0, 1, 4, 5, 11, 13, 16
+			],
+			"All": [
+				0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+			]
+		},
+		"scenes": [
+			{
+				"name": "Act 1, Scene 4 (Look at the Sky)",
+				"meta": "files/1.4.audio.json",
+				"audio": "files/1.4.mp3"
+			}
+		]
+	};
+	var ta = document.getElementById('in');
+	var button = document.getElementById('b');
+
+	button.onclick = function () {
+		var outjson = {"lines": []};
+
+		var lines = ta.value.split('\n');
+		for (var i = 0; i < lines.length; i++) {
+			var matches = lines[i].match(/([A-Z0-9 -\/#.]+): ([^\n]+)/i);
+			var chars = matches[1].split('/');
+			var charArray = [];
+			for (var j = 0; j < chars.length; j++) {
+				if (characters.characterClasses[chars[j]] !== undefined) {
+					charArray = charArray.concat(characters.characterClasses[chars[j]]);
+				}
+				var charIndex = characters.characters.indexOf(chars[j]);
+				if (charIndex !== -1) {
+					charArray.push(charIndex);
+				}
+			}
+			if (charArray.length === 0) {
+				console.error('FATAL: character does not exist:', matches[1]);
+				return;
+			}
+
+			outjson.lines.push({"characters": charArray, "line": matches[2]});
+		}
+
+		console.log(JSON.stringify(outjson));
+	};
+</script>
